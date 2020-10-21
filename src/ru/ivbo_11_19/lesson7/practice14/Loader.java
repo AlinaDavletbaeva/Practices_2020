@@ -1,7 +1,8 @@
 package ru.ivbo_11_19.lesson7.practice14;
 
+import java.util.ArrayList;
 import java.util.Random;
-import java.util.function.Predicate;
+
 
 public class Loader {
     public static void main(String[] args) {
@@ -9,6 +10,7 @@ public class Loader {
         Random random = new Random(50_000);
         for (int i = 0; i < 25; i++) {
             Employee employee = new Employee(
+                    i,
                     "Петров",
                     "Пётр",
                     1946 + random.nextInt(50),
@@ -16,9 +18,10 @@ public class Loader {
                     "89245651123",
                     20_000 + random.nextInt(50_000));
             company.addEmployee(employee);
+          //  company.deleteEmployee(employee, i+1);
 
-            // System.out.println(employee);
-            //company.deleteEmployee(employee, 5);
+            System.out.println(employee);
+           // company.deleteEmployee();
             //car.addMileage(random.nextInt(100_000));
         }
 

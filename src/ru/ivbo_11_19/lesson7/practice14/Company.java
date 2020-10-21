@@ -1,4 +1,5 @@
 package ru.ivbo_11_19.lesson7.practice14;
+import java.sql.SQLOutput;
 import java.util.ArrayList;//работа с массивами
 import java.util.function.Predicate;
 
@@ -9,10 +10,20 @@ public class Company {
         this.employees = new ArrayList<>();
     }
 
+    @Override
+    public String toString() {
+        return "Company{" +
+                "employees=" + employees + '}';
+    }
+
     //увольнять и нанимать
 
-    public void addEmployee(Employee employee){
+   public void addEmployee(Employee employee){
         employees.add(employee);
+    }
+
+    public void deleteEmployee(ArrayList<Employee> employees, int IndexOfDelete){
+        employees.remove(2);
     }
 
     //public void giveBonus(Employee employee, int salary) {
@@ -29,10 +40,6 @@ public class Company {
         }
         System.out.println("Кол-во: " + count);
     }
-    @Override
-    public String toString() {
-        return "Company{" +
-                "employees=" + employees + '}';
-    }
+
     //анонимный класс без имени в примере CarHandler
 }

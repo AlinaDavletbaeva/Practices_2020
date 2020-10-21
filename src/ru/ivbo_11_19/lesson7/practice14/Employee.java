@@ -1,6 +1,7 @@
 package ru.ivbo_11_19.lesson7.practice14;
 
 public class Employee {
+    private final int number; //номер в списке
     private final String surname;//фамилия
     private final String name;//имя
     private final int birthday; //день рождения
@@ -10,7 +11,8 @@ public class Employee {
 
 
 //конструктор
-    public Employee(String surname, String name, int birthday, String address, String phone, int salary) {
+    public Employee(int number, String surname, String name, int birthday, String address, String phone, int salary) {
+        this.number = number;
         this.surname = surname;
         this.name = name;
         this.birthday = birthday;
@@ -44,7 +46,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return number+1 + ". Employee{" +
                 "surname='" + surname + '\'' +
                 ", name='" + name + '\'' +
                 ", birthday='" + birthday + '\''+
