@@ -18,7 +18,8 @@ public class Loader {
                     "89245651123",
                     20_000 + random.nextInt(50_000));
             company.addEmployee(employee);
-          //  company.deleteEmployee(employee, i+1);
+            //company.deleteEmployee();
+
 
             System.out.println(employee);
            // company.deleteEmployee();

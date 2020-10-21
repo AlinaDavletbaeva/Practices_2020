@@ -22,13 +22,11 @@ public class Company {
         employees.add(employee);
     }
 
-    public void deleteEmployee(ArrayList<Employee> employees, int IndexOfDelete){
-        employees.remove(2);
-    }
+    /*public void deleteEmployee(){
+        employees.remove(0);
+    }*/
 
-    //public void giveBonus(Employee employee, int salary) {
 
-    //}
 //методы сортировки и поиска
     public void  findEmployees(EmployeesSelector selector, handleEmployees handleEmployees){
         int count = 0;
@@ -40,6 +38,4 @@ public class Company {
         }
         System.out.println("Кол-во: " + count);
     }
-
-    //анонимный класс без имени в примере CarHandler
 }
