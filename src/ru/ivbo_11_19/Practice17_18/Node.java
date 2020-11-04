@@ -1,38 +1,27 @@
 package ru.ivbo_11_19.Practice17_18;
 
+import java.util.ArrayList;
+
 public class Node {
-    private int value;//0 или 1
-    private int command; //от 1 до 6
-    private Node next;//поле в узле со ссылкой на значение той же переменной в след.узле
-//пишем get set для полей Node: значение, поле следующего, хвост как поле в узле не задаём
-    public Node(int value) {
-        this.value = value;
+    private ArrayList<Integer> connections = new ArrayList<>();
+    private ArrayList<String> instructions = new ArrayList<>();
+    private ArrayList<Node> states =  new ArrayList<>();
+    public void setall (int connection,String instruction,Node state){
+        connections.add(connection);
+        instructions.add(instruction);
+        states.add(state);
     }
 
-    public int getValue() {
-        return value;
+    public ArrayList<Integer> getConnections() {
+        return connections;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public ArrayList<String> getInstructions() {
+        return instructions;
     }
 
-    public int getCommand() {
-        return command;
+    public ArrayList<Node> getStates() {
+        return states;
     }
-
-    public void setCommand(int command) {
-        this.command = command;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
-
-
 
 }
