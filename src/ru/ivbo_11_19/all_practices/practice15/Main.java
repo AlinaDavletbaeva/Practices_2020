@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Employee gleb  = new Employee();
+        Employee alina  = new Employee();
         try {
             int b = Integer.parseInt(new Scanner(System.in).nextLine());
-            gleb.addAge(b);
+            alina.addAge(b);
 
         }
         catch (ThrowException ex){
