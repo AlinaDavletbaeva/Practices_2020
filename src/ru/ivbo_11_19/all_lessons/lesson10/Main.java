@@ -1,4 +1,4 @@
-package ru.ivbo_11_19.all_lessons.lesson10;
+/*package ru.ivbo_11_19.all_lessons.lesson10;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ public class Main {
                 .toAbsolutePath()//укажет путь
                 .getParent()//наверх на один
                 .getParent();
-        String basePath = "src/ru/ivbo_11_19/Lesson10";
+        String basePath = "src/ru/ivbo_11_19/";
         String mainFile = "Main.java";//можно указывать путь к любому другому текстовому файлу
         String copyFile = "copy.txt";
         File file = new File(basePath);//массив файлов
@@ -37,7 +37,7 @@ public class Main {
                       readed = reader.read(); // отобразится весь исходный код из мэйна
                   }
               }*/
-            try(BufferedReader reader = new BufferedReader(mainFilePath)){//вместо посимвольного чтения, работает с интом
+          /*  try(BufferedReader reader = new BufferedReader(mainFilePath)){//вместо посимвольного чтения, работает с интом
                 int readed = reader.read();//считываем, пока код не равно -1
                 while (readed != -1)
                 {
@@ -51,4 +51,5 @@ public class Main {
             e.printStackTrace();
         //} catch (IOE)
     }
-}
+}}
+*/

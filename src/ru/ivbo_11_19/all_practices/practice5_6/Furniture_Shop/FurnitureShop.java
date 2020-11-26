@@ -1,4 +1,4 @@
-package ru.ivbo_11_19.all_practices.practice5_6.Furniture_Shop;
+/*package ru.ivbo_11_19.all_practices.practice5_6.Furniture_Shop;
 import java.util.ArrayList;
 
 public class FurnitureShop {
@@ -75,3 +75,4 @@ public class FurnitureShop {
                 '}';
     }
 }
+*/
