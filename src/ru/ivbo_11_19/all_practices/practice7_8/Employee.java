@@ -1,94 +1,39 @@
 package ru.ivbo_11_19.all_practices.practice7_8;
 import java.util.List;
 
-    abstract class Employee implements EmployeePosition{//имплементируется от другого
-        private String surname;
-        private String name;
-        private String salary;
-        private String position;//тоже в компании
-        public List<Employee> employees; //должно быть в компании
-
-        Employee(String surname, String name){
-            this.surname = surname;
-            this.name = name;
+public class Employee {
+    public String name, surname, post;
+    public double baseSalary, salary;
+    public Employee(Company company, String post, String name, String surname)
+    {
+        baseSalary = company.getBaseSalary();
+        this.name = name;
+        this.surname = surname;
+        this.post = post;
+        if (post == "Manager")
+        {
+            Manager manager = new Manager();
+            salary = manager.calcSalary(baseSalary);
         }
-
-        public String getSurname(){
-            return surname;
+        else if (post == "Top Manager")
+        {
+            TopManager topManager = new TopManager(company);
+            salary = topManager.calcSalary(baseSalary);
         }
-
-        public void setSurname(String surname) {
-            this.surname = surname;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getPosition() {
-            return position;
-        }
-
-        public void setPosition(String position) {
-            this.position = position;
-        }
-
-        public String getSalary() {
-            return salary;
-        }
-
-        public void setSalary(String salary) {
-            this.salary = salary;
+        else
+        {
+            Operator operator = new Operator();
+            salary = operator.calcSalary(baseSalary);
         }
     }
 
-    class Manager extends Employee{
-        Manager(String surname, String name){
-            super(surname, name);
-
-        }
-
-        @Override
-        public String getJobTitle() {//должность
-            return "Manager";
-        }
-
-        public double calcSalary(double baseSalary){//з.п.
-            return 1;
-        }
+    @Override
+    public String toString() {
+        return "\nИнформация о сотруднике: " +
+                "\nИмя: "+ name + " " + surname +
+                //"\nФамилия: " + surname +
+                "\nДолжность: " + post +
+                "\nЗарплата: " + salary + "\n";
     }
-
-    class TopManager extends Employee{
-        TopManager(String surname, String name){
-            super(surname, name);
-        }
-
-        @Override
-        public String getJobTitle() {
-            return "Top Manager";
-        }
-
-        public double calcSalary(double baseSalary){
-            return 1;
-        }
-    }
-
-    class Operator extends Employee{
-        Operator(String surname, String name){
-            super(surname, name);
-        }
-
-        @Override
-        public String getJobTitle() {
-            return "Operator";
-        }
-
-        public double calcSalary(double baseSalary){
-            return 1;
-        }
-    }
+}
 

@@ -18,7 +18,7 @@ public class Main {
             System.out.println("Incorrect input format");
         }
         finally {
-            System.out.println(gleb);
+            System.out.println("gleb");
         }
         throw new ThrowRuntimeException();
 
