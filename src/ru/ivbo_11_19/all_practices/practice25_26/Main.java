@@ -1,8 +1,7 @@
-package ru.ivbo_11_19.all_practices.practice25;
+package ru.ivbo_11_19.all_practices.practice25_26;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 

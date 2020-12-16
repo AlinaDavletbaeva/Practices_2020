@@ -1,4 +1,4 @@
-package ru.ivbo_11_19.all_practices.practice25;
+package ru.ivbo_11_19.all_practices.practice25_26;
 
 import java.io.*;
 import java.nio.file.Path;
