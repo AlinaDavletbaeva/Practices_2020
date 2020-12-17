@@ -82,11 +82,11 @@ public class ClientHandler implements Runnable {
             ex.printStackTrace();
         }
     }
-    // клиент выходит из чата
+
     public void close() throws IOException {
         // удаляем клиента из списка
         server.removeClient(this);
         clients_count--;
-        server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
+        server.sendMessageToAllClients("Количество клиентов = " + clients_count);
     }
 }
