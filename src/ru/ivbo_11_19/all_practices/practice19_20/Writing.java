@@ -3,7 +3,7 @@ import java.io.*;
 import java.nio.file.Paths;
 public class Writing {
     public void exec() {
-        File tmp = new File("D://result.md");
+        File tmp = new File("C://Users//Alina//Desktop//JAVAPR//src//ru//ivbo_11_19//all_practices//practice19_20//result.md");
         tmp.delete();
         File file = new File("src");
         search(file);
