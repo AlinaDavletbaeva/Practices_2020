@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
-        System.out.println("Where u wanna work?\n"+
+        System.out.println("Work place?\n"+
                 "1|	on server\n"+
                 "2|	in file");
         int a=in.nextInt();
@@ -20,7 +20,7 @@ public class Main {
             exec.execApp();
         } else
         {
-            System.out.println("Are u mad? I don't wanna play with u. BB");
+            System.out.println("End");
         }
     }
 }
