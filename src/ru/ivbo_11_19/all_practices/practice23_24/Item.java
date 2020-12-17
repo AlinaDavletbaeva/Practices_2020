@@ -44,4 +44,22 @@ public class Item {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String toStringWithoutDesc() {
+        return "Item{" +
+                "id=" + id +
+                ", data='" + data + '\'' +
+                ", isGood=" + isGood +
+                '}';
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", data='" + data + '\'' +
+                ", isGood=" + isGood +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
